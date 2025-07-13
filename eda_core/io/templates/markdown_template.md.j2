@@ -1,0 +1,35 @@
+# 📊 EDA Report – {{ file_meta.source_name }}
+
+**Generated on:** {{ file_meta.created_at }}
+
+---
+
+## 📋 Table Summary
+
+| Metric              | Value                         |
+|---------------------|-------------------------------|
+| Total Rows          | {{ table_summary.row_count }} |
+| Total Columns       | {{ table_summary.column_count }} |
+| Missing Values (%)  | {{ "%.2f"|format(table_summary.missing_pct or 0) }}% |
+| Total Outliers      | {{ table_summary.total_outliers or 0 }} |
+
+---
+
+## 📌 Column-wise Insights
+
+{% for col in column_profiles %}
+### 🔹 {{ col.column }}  _(dtype: {{ col.dtype }})_
+
+- **Missing:** {{ col.missing or 0 }} rows ({{ "%.2f"|format(col.missing_pct or 0) }}%)
+- **Outliers:** {{ col.outlier_count or 0 }}
+- **Insight:**  
+{{ col.ai_insight or "*No insight available.*" }}
+
+{% if col.plot_files %}
+**Visualizations:**
+{% for img in col.plot_files %}
+![{{ img }}](../plots/{{ img }})
+{% endfor %}
+{% endif %}
+---
+{% endfor %}

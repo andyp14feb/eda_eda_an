@@ -1,0 +1,16 @@
+# Ignore Python stuff
+__pycache__/
+*.pyc
+.env
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore virtual environments
+venvnya/
+
+sample_source/*
+catatan/
+outputs/
+
+

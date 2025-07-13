@@ -1,0 +1,70 @@
+eda_eda_an/
+├── ai
+│   ├── models
+│   │   ├── ollama_client.py
+│   │   └── openai_client.py
+│   ├── prompt_templates
+│   │   └── base_prompt.md
+│   ├── __init__.py
+│   ├── create_ai_prompt.py
+│   ├── generate_ai_insight.py
+│   ├── llm_client.py
+│   └── llm_client_openai.py
+├── eda_core
+│   ├── io
+│   │   ├── __init__.py
+│   │   ├── load_excel.py
+│   │   └── save_output.py
+│   ├── plots
+│   │   └── plot_utils.py
+│   ├── profile
+│   │   ├── __init__.py
+│   │   ├── column_report.py
+│   │   ├── detect_outliers.py
+│   │   ├── profile_categorical.py
+│   │   ├── profile_missing.py
+│   │   ├── profile_numeric.py
+│   │   └── table_profile.py
+│   ├── transform
+│   │   ├── profile
+│   │   │   └── profile_numeric.py
+│   │   ├── __init__.py
+│   │   └── infer_dtypes.py
+│   ├── utils
+│   │   ├── __init__.py
+│   │   ├── logger_utils.py
+│   │   └── persist_metadata.py
+│   ├── validation
+│   │   └── validate_schema.py
+│   └── __init__.py
+├── outputs
+│   ├── blahblah
+│   │   ├── insights
+│   │   │   ├── insight_20250713_203109_blahblah.json
+│   │   │   └── table_insight_20250713_203109_blahblah.json
+│   │   ├── plots
+│   │   │   ├── PERIOD OF SERVICE_box.png
+│   │   │   └── PERIOD OF SERVICE_hist.png
+│   │   └── stats
+│   │       ├── colum_profile.json
+│   │       └── table_profile.json
+│   └── cupu
+│       ├── insights
+│       │   ├── insight_20250713_202902_cupu.json
+│       │   └── table_insight_20250713_202902_cupu.json
+│       └── stats
+│           ├── colum_profile.json
+│           └── table_profile.json
+├── sample_source
+│   ├── blahblah.xlsx
+│   ├── cupu.xlsx
+│   └── test.xlsx
+├── tests
+│   ├── __init__.py
+│   ├── cli_ai_insight_runner.py
+│   ├── cli_ai_insight_runner_v2.py
+│   └── test_numeric_profile.py
+├── .env
+├── README.md
+├── structure.txt
+└── tree.py
